@@ -215,7 +215,7 @@ export default function StudentLeaderboard({ adminView }) {
   const VIEWS = [
     { id: 'batch', label: isStudent ? 'My Batch' : 'Batch', active: true },
     { id: 'center', label: isStudent ? 'My Center' : 'Center', active: true },
-    { id: 'global', label: 'Global Ranking', adminOnly: true },
+    { id: 'global', label: 'All-India Ranking', adminOnly: true },
   ];
 
   const allowedCentersObjects = CENTERS.filter(c => allowedCenterIds.includes(c.id));

@@ -14,7 +14,7 @@
 ### 🔐 Demo Credentials
 | Role | Email | Password | Access Level |
 | :--- | :--- | :--- | :--- |
-| **Management** | `management@pwioi.edu` | `mgmt123` | Global Strategic View |
+| **Management** | `management@pwioi.edu` | `mgmt123` | All-India Strategic View |
 | **Faculty** | `verma@noi.pwioi.edu` | `faculty123` | Center & School Scoped |
 | **Student** | `aarav1@student.pwioi.edu`| `student123` | Personal Growth Hub |
 
@@ -38,7 +38,7 @@ graph LR
     end
 
     subgraph "Output Layer"
-        Data --> LB[Global Leaderboards]
+        Data --> LB[All-India Leaderboards]
         Data --> RAG[RAG Risk Analysis]
         Data --> PL[Placement Readiness]
     end
@@ -55,7 +55,7 @@ graph LR
 The primary goal of the student view is **motivation through transparency**.
 *   **The XP System**: Every action (attendance, assessment, participation) contributes to an XP (Experience Point) pool. As students reach thresholds, they level up.
 *   **The Streak Engine**: Developed to prize consistency. A 5-day streak provides a multiplier to XP gains.
-*   **Leaderboard Scoping**: Students can toggle between "My Batch," "My Center," and "Global." This allows them to see where they stand in their immediate peer group vs. the entire PW IOI ecosystem.
+*   **Leaderboard Scoping**: Students can toggle between "My Batch," "My Center," and "All-India." This allows them to see where they stand in their immediate peer group vs. the entire PW IOI ecosystem.
 *   **Personalized Analytics**: Radar charts show the student their "Skill Balance" (Leadership vs. Tech vs. Communication).
 *   **Rewards Catalog**: Real-world rewards (Tech swag, Mentorship sessions) can be claimed using the badges earned on the platform.
 
