@@ -16,26 +16,41 @@ The **IOI Career Excellence Platform** is a custom-engineered, mobile-first anal
 
 ---
 
-## 🏛️ System Architecture
+## 🏛️ System Ecosystem & Data Lifecycle
 
 ```mermaid
 graph TD
-    User((User)) --> Auth{Role-Based Auth}
-    Auth -->|Student| SD[Student Dashboard]
-    Auth -->|Faculty| FD[Faculty Terminal]
-    Auth -->|Director| MD[Management Dashboard]
-
-    subgraph "Core Data Engine"
-        SD --> XP[XP & Badge System]
-        FD --> RS[RAG Score Engine]
-        MD --> AT[Analytics & Trends]
+    subgraph "Entry Layer"
+        User((User)) -->|HTTPS/Vercel| UI[Liquid Glass UI]
+        UI --> Auth{Role Scoping}
     end
 
-    subgraph "Visual Layer"
-        XP --> LG[Liquid Glass UI]
-        RS --> LG
-        AT --> LG
+    subgraph "Strategic Dashboards"
+        Auth -->|Student| S_Hub[Growth Hub Dashboard]
+        Auth -->|Faculty| F_Term[Scoring Terminal]
+        Auth -->|Management| M_Apex[Strategy Apex View]
     end
+
+    subgraph "Cognitive Data Engine"
+        F_Term -->|Sync| DS[(Central Data Store)]
+        S_Hub -->|Fetch| DS
+        M_Apex -->|Aggregate| DS
+        
+        DS -->|Trigger| Game[Gamification Logic]
+        Game -->|XP/Levels| Badges{Badge Wallet}
+        Badges -->|Spotlight| HOF[Hall of Fame]
+    end
+
+    subgraph "Actionable Insights"
+        DS -->|Analysis| RAG{RAG Status Enginge}
+        RAG -->|Critical| Alerts[Faculty Intervention]
+        RAG -->|Elite| PL[Placement Readiness]
+    end
+
+    style User fill:#6366f1,stroke:#fff,stroke-width:2px
+    style DS fill:#1e1b4b,stroke:#6366f1,stroke-width:2px
+    style Game fill:#7c3aed,stroke:#fff,stroke-width:2px
+    style RAG fill:#ef4444,stroke:#fff,stroke-width:2px
 ```
 
 ---
@@ -108,7 +123,7 @@ src/
 
 1. **Clone & Install**
    ```bash
-   git clone [your-repo-link]
+   git clone https://github.com/raunitx-02/IOI-Career-Excellence-OS.git
    cd ioi-leaderboard
    npm install
    ```
@@ -125,7 +140,7 @@ src/
 
 ---
 
-## 👤 Author: Raunit Jha
+## 👤 Author: Raunit Raj
 > **Developer Insight**: This project was built entirely as a **solo initiative**. While initially framed as a team project, I took full ownership of the end-to-end architecture—from the design tokens to the data-scoping logic—to ensure the highest possible standard of quality and performance for the IOI ecosystem.
 
 ---
